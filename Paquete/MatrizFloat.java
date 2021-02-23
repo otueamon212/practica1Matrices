@@ -15,18 +15,19 @@ public class MatrizFloat extends Matriz
     }
     public void iniciarMatFloat()
     {
+        DecimalFormat deci = new DecimalFormat("#.00");
         Random gen = new Random();
         for(int i = 0; i < this.renglones; i++)
             for(int j = 0; j < this.columnas; j++)
-                this.array[i][j] = (float)(gen.nextInt(10));
+                this.array[i][j] = Float.parseFloat(deci.format((gen.nextFloat()*(10-0))));
     }
     public void imprimirMatFloat()
     {
-        for(int i = 0; i < this.renglones; i++)
-        {
-            for (int j = 0; j < this.columnas; j++)
-                System.out.println();
+        for(int i = 0; i < this.renglones; i++) {
+            for (int j = 0; j < this.columnas; j++){
+                System.out.print("["+this.array[i][j]+"]");
+            }
+            System.out.println("");
         }
-        System.out.println();
     }
 }

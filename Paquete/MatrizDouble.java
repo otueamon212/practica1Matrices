@@ -15,18 +15,19 @@ public class MatrizDouble extends Matriz
     }
     public void iniciarMatDouble()
     {
+        DecimalFormat deci = new DecimalFormat("#.000000");
         Random gen = new Random();
         for(int i = 0; i < this.renglones; i++)
             for(int j = 0; j < this.columnas; j++)
-                this.array[i][j] = (double)(gen.nextInt(10));
+                this.array[i][j] = Double.parseDouble(deci.format((gen.nextFloat()*(10-0))));
     }
     public void imprimirMatDouble()
     {
-        for(int i = 0; i < this.renglones; i++)
-        {
-            for (int j = 0; j < this.columnas; j++)
-                System.out.println();
+        for(int i = 0; i < this.renglones; i++) {
+            for (int j = 0; j < this.columnas; j++){
+                System.out.print("["+this.array[i][j]+"]");
+            }
+            System.out.println("");
         }
-        System.out.println();
     }
 }

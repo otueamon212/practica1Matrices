@@ -144,7 +144,7 @@ public class OperacionesMatrices
         }
         return matResult;
     }
-    public static MatrizDouble multiplicarMatDouble(MatrizInt m5, MatrizInt m6)
+    public static MatrizDouble multiplicarMatDouble(MatrizDouble m5, MatrizDouble m6)
     {
         MatrizDouble matResult = new MatrizDouble(m5.getRenglones(), m6.getColumnas());
         for(int i = 0; i < matResult.array.length; i++)

@@ -22,12 +22,12 @@ public class MatrizInt extends Matriz
     }
     public void imprimirMatInt()
     {
-        for(int i = 0; i < this.renglones; i++)
-        {
-            for (int j = 0; j < this.columnas; j++)
-                System.out.println();
+        for(int i = 0; i < this.renglones; i++) {
+            for (int j = 0; j < this.columnas; j++){
+                System.out.print("["+this.array[i][j]+"]");
+            }
+            System.out.println("");
         }
-        System.out.println();
     }
     public void imprimirMatIntG()
     {
